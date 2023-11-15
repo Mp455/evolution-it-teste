@@ -1,29 +1,44 @@
-import React from "react";
-import Input from "@/components/Input";
 import Button from "@/components/Button";
-import { FaUserEdit } from "react-icons/fa";
+import Input from "@/components/Input";
+import React from "react";
 
-interface EditUserProps {
-  closeModal: () => void;
-}
+const EditUser = () => {
+  const openModal = () => {
+    const modal = document.getElementById(
+      "my_modal_2"
+    ) as HTMLDialogElement | null;
+    if (modal) {
+      modal.showModal();
+    }
+  };
 
-const EditUser: React.FC<EditUserProps> = ({ closeModal }) => {
   return (
     <div>
-      <FaUserEdit />
-      <h2 className=" flex w-full justify-center">Editar Usuário</h2>
-
-      <p>Nome de Usuário</p>
-      <Input></Input>
-      <p>E-mail</p>
-      <Input></Input>
-      <p>Senha</p>
-      <Input></Input>
-      <div className="flex mt-8">
-        <Button className="mt-8 flex w-full justify-center">
-          Atualizar Usuário
-        </Button>
-      </div>
+      <Button onClick={openModal} className="btn shadow-xl ">
+        Editar Usuário
+      </Button>
+      <dialog id="my_modal_2" className="modal modal-bottom sm:modal-middle">
+        <div className="modal-box">
+          <h3 className="font-bold text-lg text-center">Atualizar Dados</h3>
+          <div className="mb-5">
+            <p>Nome de Usuário</p>
+            <Input />
+          </div>
+          <div className="mb-5">
+            <p>E-mail</p>
+            <Input />
+          </div>
+          <div className="mb-5">
+            <p>Senha</p>
+            <Input />
+          </div>
+          <div className="modal-action">
+            <form method="dialog">
+              <Button>Atualizar</Button>
+            </form>
+          </div>
+        </div>
+      </dialog>
     </div>
   );
 };
