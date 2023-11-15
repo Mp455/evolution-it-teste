@@ -3,6 +3,7 @@ import DatePicker from "@/components/DatePicker";
 import Input from "@/components/Input";
 import Select from "@/components/Select";
 import React from "react";
+import { FaFileContract } from "react-icons/fa";
 
 const RegisterContract = () => {
   const openModal = () => {
@@ -19,10 +20,11 @@ const RegisterContract = () => {
   return (
     <div>
       <Button onClick={openModal} className="btn shadow-xl ">
-        Cadastrar Contrato
+        Cadastrar Contrato <FaFileContract size={15} />
       </Button>
       <dialog id="my_modal_3" className="modal modal-bottom sm:modal-middle">
         <div className="modal-box">
+          <FaFileContract />
           <h3 className="font-bold text-lg text-center">
             Cadastro de Contrato
           </h3>

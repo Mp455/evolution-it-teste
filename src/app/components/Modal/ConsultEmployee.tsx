@@ -4,6 +4,7 @@ import Select from "@/components/Select";
 import Card from "@/components/Card";
 import React from "react";
 import RegisterUser from "./RegisterUser";
+import { PiUsersThreeFill } from "react-icons/pi";
 
 const ConsultEmployee = () => {
   const openModal = () => {
@@ -20,10 +21,11 @@ const ConsultEmployee = () => {
   return (
     <div>
       <Button onClick={openModal} className="btn shadow-xl ">
-        Consultar Funcionário
+        Consultar Funcionário <PiUsersThreeFill size={15} />
       </Button>
       <dialog id="my_modal_4" className="modal modal-bottom sm:modal-middle">
         <div className="modal-box">
+          <PiUsersThreeFill />
           <h3 className="font-bold text-lg text-center pb-3">
             Consulta de Funcionário
           </h3>

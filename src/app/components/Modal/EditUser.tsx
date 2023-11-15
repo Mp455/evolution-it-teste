@@ -1,6 +1,7 @@
 import Button from "@/components/Button";
 import Input from "@/components/Input";
 import React from "react";
+import { FaUserEdit } from "react-icons/fa";
 
 const EditUser = () => {
   const openModal = () => {
@@ -15,10 +16,11 @@ const EditUser = () => {
   return (
     <div>
       <Button onClick={openModal} className="btn shadow-xl ">
-        Editar Usuário
+        Editar Usuário <FaUserEdit size={15} />
       </Button>
       <dialog id="my_modal_2" className="modal modal-bottom sm:modal-middle">
         <div className="modal-box">
+          <FaUserEdit />
           <h3 className="font-bold text-lg text-center">Atualizar Dados</h3>
           <div className="mb-5">
             <p>Nome de Usuário</p>

@@ -8,13 +8,13 @@ interface ButtonProps extends ComponentPropsWithoutRef<"button"> {
 function Button({ className, variant = "primary", ...props }: ButtonProps) {
   const variantClasses = {
     primary:
-      "bg-primary text-white hover:bg-primaryDarker border-none h-[50px]",
+      "bg-primary text-white hover:bg-primaryDarker border-none h-[60px]",
     outlined:
-      "bg-transparent border-2 border-grayPrimary text-grayPrimary hover:bg-grayPrimary hover:text-white h-[50px]",
+      "bg-transparent border-2 border-grayPrimary text-grayPrimary hover:bg-grayPrimary hover:text-white h-[60px]",
     green:
-      "text-greenPrimary border-greenPrimary border hover:bg-greenPrimary bg-transparent hover:text-white h-[50px]",
+      "text-greenPrimary border-greenPrimary border hover:bg-greenPrimary bg-transparent hover:text-white h-[60px]",
     danger:
-      "text-redPrimary border-redPrimary border hover:bg-redPrimary bg-transparent hover:text-white h-[50px]",
+      "text-redPrimary border-redPrimary border hover:bg-redPrimary bg-transparent hover:text-white h-[60px]",
   };
 
   const _className = twMerge(

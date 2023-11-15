@@ -2,6 +2,7 @@ import Button from "@/components/Button";
 import Input from "@/components/Input";
 import Select from "@/components/Select";
 import React from "react";
+import { MdWorkHistory } from "react-icons/md";
 
 const SupplyHistory = () => {
   const openModal = () => {
@@ -18,10 +19,11 @@ const SupplyHistory = () => {
   return (
     <div>
       <Button onClick={openModal} className="btn shadow-xl ">
-        Histórico de Abastecimento
+        Histórico de Abastecimento <MdWorkHistory size={15} />
       </Button>
       <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
         <div className="modal-box">
+          <MdWorkHistory />
           <h3 className="font-bold text-lg text-center pb-3">
             Histórico de Abastecimento
           </h3>
