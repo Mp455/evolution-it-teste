@@ -18,10 +18,11 @@ const config: Config = {
         primaryLighter: "#DDD5EA",
         primaryDarker: "#1414b9",
         grayPrimary: "#717171",
-        grayLighter: "#BBBFBF",
+        greenPrimary: "#00a200",
+        redPrimary: "#FF0000",
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 };
 export default config;
