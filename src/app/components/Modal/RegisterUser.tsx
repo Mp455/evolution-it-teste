@@ -1,27 +1,44 @@
-import React from "react";
-import Input from "@/components/Input";
 import Button from "@/components/Button";
+import Input from "@/components/Input";
+import React from "react";
 
-interface RegisterUserProps {
-  closeModal: () => void;
-}
+const RegisterUser = () => {
+  const openModal = () => {
+    const modal = document.getElementById(
+      "my_modal_1"
+    ) as HTMLDialogElement | null;
+    if (modal) {
+      modal.showModal();
+    }
+  };
 
-const RegisterUser: React.FC<RegisterUserProps> = ({ closeModal }) => {
   return (
     <div>
-      <h2 className=" flex w-full justify-center">Cadasto de Usuário</h2>
-
-      <p>Nome de Usuário</p>
-      <Input></Input>
-      <p>E-mail</p>
-      <Input></Input>
-      <p>Senha</p>
-      <Input></Input>
-      <div className="flex mt-8">
-        <Button className="mt-8 flex w-full justify-center">
-          Cadastrar Usuário
-        </Button>
-      </div>
+      <Button onClick={openModal} className="btn shadow-xl ">
+        Cadastrar Usuário
+      </Button>
+      <dialog id="my_modal_1" className="modal modal-bottom sm:modal-middle">
+        <div className="modal-box">
+          <h3 className="font-bold text-lg text-center">Cadastro de Usuário</h3>
+          <div className="mb-5">
+            <p>Nome de Usuário</p>
+            <Input />
+          </div>
+          <div className="mb-5">
+            <p>E-mail</p>
+            <Input />
+          </div>
+          <div className="mb-5">
+            <p>Senha</p>
+            <Input />
+          </div>
+          <div className="modal-action">
+            <form method="dialog">
+              <Button>Cadastrar Usuário</Button>
+            </form>
+          </div>
+        </div>
+      </dialog>
     </div>
   );
 };
