@@ -1,3 +1,4 @@
+import ToastProvider from "@/providers/toast";
 import "./globals.css";
 import { Poppins } from "next/font/google";
 
@@ -19,11 +20,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <div className="flex flex-col h-screen">
-          <div className="h-[94px]"></div>
+        <ToastProvider>
+          <div className="flex flex-col h-screen">
+            <div className="h-[94px]"></div>
 
-          <div className="flex-1">{children}</div>
-        </div>
+            <div className="flex-1">{children}</div>
+          </div>
+        </ToastProvider>
       </body>
     </html>
   );
