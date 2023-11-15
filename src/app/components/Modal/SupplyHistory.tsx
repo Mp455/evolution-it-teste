@@ -1,28 +1,51 @@
-import React from "react";
-import Input from "@/components/Input";
 import Button from "@/components/Button";
-import { LuUserPlus2 } from "react-icons/lu";
-interface SupplyHistoryProps {
-  closeModal: () => void;
-}
+import Input from "@/components/Input";
+import Select from "@/components/Select";
+import React from "react";
 
-const SupplyHistory: React.FC<SupplyHistoryProps> = ({ closeModal }) => {
+const SupplyHistory = () => {
+  const openModal = () => {
+    const modal = document.getElementById(
+      "my_modal_5"
+    ) as HTMLDialogElement | null;
+    if (modal) {
+      modal.showModal();
+    }
+  };
+
+  const options = ["Últimos 10 dias", "Últimos 20 dias", "Últimos 30 dias"];
+
   return (
     <div>
-      <LuUserPlus2 />
-      <h2 className=" flex w-full justify-center">Cadastro de Usuário</h2>
-
-      <p>Nome de Usuário</p>
-      <Input></Input>
-      <p>E-mail</p>
-      <Input></Input>
-      <p>Senha</p>
-      <Input></Input>
-      <div className="flex mt-8">
-        <Button className="mt-8 flex w-full justify-center">
-          Cadastrar Usuário
-        </Button>
-      </div>
+      <Button onClick={openModal} className="btn shadow-xl ">
+        Histórico de Abastecimento
+      </Button>
+      <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
+        <div className="modal-box">
+          <h3 className="font-bold text-lg text-center pb-3">
+            Histórico de Abastecimento
+          </h3>
+          <div className="mb-5">
+            <p>Informe a placa do Veículo</p>
+            <Input placeholder="Digite a placa do veículo" />
+          </div>
+          <div className="mb-5">
+            <p>Selecione o Período</p>
+            <Select options={options} />
+          </div>
+          <div className="flex justify-end">
+            <div className="mr-3">
+              <Button>Consultar</Button>
+            </div>
+            <div className="mr-3">
+              <Button variant="outlined">Fechar</Button>
+            </div>
+            <div className="mr-3">
+              <Button variant="green">Exportar</Button>
+            </div>
+          </div>
+        </div>
+      </dialog>
     </div>
   );
 };
