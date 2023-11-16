@@ -17,12 +17,18 @@ const Card = () => {
       </figure>
       <div className="card-body">
         <h2 className="card-title">Funcionário 1</h2>
-        <p>Click the button to watch on Jetflix app.</p>
-        <div className=" flex modal-action">
-          <EditUser />
-          <Button onClick={handleInativeUserClick} variant="green">
-            Inativar
-          </Button>
+        <p>Nome: </p>
+        <p>Filial: </p>
+        <p>Cargo:</p>
+        <div className="container">
+          <div className="flex flex-col lg:flex-row justify-between mt-3">
+            <div className="mb-3 lg:mb-0">
+              <EditUser />
+              <Button onClick={handleInativeUserClick} variant="green">
+                Inativar
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

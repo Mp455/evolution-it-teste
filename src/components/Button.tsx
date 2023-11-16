@@ -12,7 +12,7 @@ function Button({ className, variant = "primary", ...props }: ButtonProps) {
     outlined:
       "bg-transparent border-2 border-grayPrimary text-grayPrimary hover:bg-grayPrimary hover:text-white h-[60px]",
     green:
-      "text-greenPrimary border-greenPrimary border hover:bg-greenPrimary bg-transparent hover:text-white h-[60px]",
+      "text-greenPrimary border-greenPrimary border hover:bg-greenPrimary bg-transparent hover:text-white h-[60px] w-full mt-2",
     danger:
       "text-redPrimary border-redPrimary border hover:bg-redPrimary bg-transparent hover:text-white h-[60px]",
     login:

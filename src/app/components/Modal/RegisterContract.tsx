@@ -40,8 +40,8 @@ const RegisterContract = () => {
             <p>Valor do Contrato</p>
             <Input />
           </div>
-          <div className="flex justify-between">
-            <div className="mb-5">
+          <div className="flex flex-col sm:flex-row sm:w-full justify-between mb-5">
+            <div className="mb-5 sm:mb-0 ">
               <p>Data de Início</p>
               <DatePicker onChange={() => {}} />
             </div>
