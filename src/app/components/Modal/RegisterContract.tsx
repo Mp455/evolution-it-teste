@@ -56,12 +56,9 @@ const RegisterContract = () => {
             <Input />
           </div>
           <div className="modal-action">
-            <form method="dialog">
-              <Button variant="danger">Cancelar</Button>
-            </form>
-            <form method="dialog">
-              <Button>Cadastrar Contrato</Button>
-            </form>
+            <Button variant="danger">Cancelar</Button>
+
+            <Button>Cadastrar Contrato</Button>
           </div>
         </div>
       </dialog>

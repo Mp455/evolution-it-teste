@@ -12,7 +12,7 @@ const Card = () => {
 
   return (
     <div className="card card-side bg-base-100 shadow-xl">
-      <figure className="w-full">
+      <figure className="w-[200px]">
         <FaRegUserCircle />
       </figure>
       <div className="card-body">

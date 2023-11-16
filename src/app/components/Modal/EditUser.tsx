@@ -35,9 +35,7 @@ const EditUser = () => {
             <Input />
           </div>
           <div className="modal-action">
-            <form method="dialog">
-              <Button>Atualizar</Button>
-            </form>
+            <Button>Atualizar</Button>
           </div>
         </div>
       </dialog>

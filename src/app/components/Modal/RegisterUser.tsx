@@ -15,11 +15,11 @@ const RegisterUser = () => {
 
   return (
     <div>
-      <Button onClick={openModal} className="btn shadow-xl ">
+      <Button onClick={openModal} className="btn shadow-xl  ">
         Cadastrar Usuário <FaUserPlus size={15} />
       </Button>
       <dialog id="my_modal_1" className="modal modal-bottom sm:modal-middle">
-        <div className="modal-box">
+        <div className="modal-box ">
           <FaUserPlus />
           <h3 className="font-bold text-lg text-center">Cadastro de Usuário</h3>
           <div className="mb-5">
@@ -35,9 +35,7 @@ const RegisterUser = () => {
             <Input />
           </div>
           <div className="modal-action">
-            <form method="dialog">
-              <Button>Cadastrar Usuário</Button>
-            </form>
+            <Button>Cadastrar Usuário</Button>
           </div>
         </div>
       </dialog>
