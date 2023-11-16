@@ -24,7 +24,11 @@ const Card = () => {
           <div className="flex flex-col lg:flex-row justify-between mt-3">
             <div className="mb-3 lg:mb-0">
               <EditUser />
-              <Button onClick={handleInativeUserClick} variant="green">
+              <Button
+                onClick={handleInativeUserClick}
+                variant="green"
+                className="mt-3"
+              >
                 Inativar
               </Button>
             </div>

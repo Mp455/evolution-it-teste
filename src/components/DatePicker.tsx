@@ -34,9 +34,6 @@ function DatePicker(
         enableTabLoop={false}
         {...props}
       />
-      {error && errorMessage && (
-        <div className="text-red-500 mt-1 text-xs">{errorMessage}</div>
-      )}
     </div>
   );
 }
